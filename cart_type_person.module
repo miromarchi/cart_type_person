@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Type person feature.
+ */
+
+include_once 'cart_type_person.features.inc';
