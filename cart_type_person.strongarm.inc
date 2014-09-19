@@ -74,6 +74,7 @@ function cart_type_person_strongarm() {
     0 => 'title',
     1 => 'body',
     2 => 'field_cart_image',
+    3 => 'field_cart_based',
   );
   $export['content_complete_fields_cart_person'] = $strongarm;
 
@@ -109,6 +110,12 @@ function cart_type_person_strongarm() {
       ),
       'ical' => array(
         'custom_settings' => FALSE,
+      ),
+      'cart_vmode_curator' => array(
+        'custom_settings' => TRUE,
+      ),
+      'cart_vmode_sponsor' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -185,6 +192,16 @@ function cart_type_person_strongarm() {
         'choice' => 0,
       ),
       'cart_vmode_minimal' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'cart_vmode_curator' => array(
+        'status' => 1,
+        'default' => 1,
+        'choice' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'status' => 1,
         'default' => 1,
         'choice' => 0,

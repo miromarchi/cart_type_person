@@ -17,10 +17,28 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 1,
+      ),
       'cart_vmode_minimal' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
         'weight' => 0,
       ),
       'default' => array(
@@ -76,10 +94,24 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'inline',
+        'module' => 'addressfield_tokens',
+        'settings' => array(),
+        'type' => 'addressfield_citystate',
+        'weight' => 2,
+      ),
       'cart_vmode_minimal' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
+        'label' => 'inline',
+        'module' => 'addressfield_tokens',
+        'settings' => array(),
+        'type' => 'addressfield_citystate',
         'weight' => 0,
       ),
       'default' => array(
@@ -134,7 +166,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -193,7 +237,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -252,7 +308,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -311,7 +379,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -369,6 +449,12 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'cart_vmode_minimal' => array(
         'label' => 'hidden',
         'module' => 'image',
@@ -377,6 +463,12 @@ function cart_type_person_field_default_field_instances() {
           'image_style' => 'cart_img_circle_icon',
         ),
         'type' => 'image',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
       'default' => array(
@@ -403,7 +495,7 @@ function cart_type_person_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => '',
+      'file_directory' => 'people',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -415,19 +507,44 @@ function cart_type_person_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 0,
+            'reference' => 0,
+            'remote' => 'remote',
+            'remotefile' => 0,
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 0,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+          ),
+        ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
         'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
-        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_crop' => 1,
         'manualcrop_instant_preview' => 1,
         'manualcrop_require_cropping' => array(
           'cart_img_circle' => 0,
+          'cart_img_coffeebook' => 0,
+          'cart_img_cover' => 0,
           'cart_img_square' => 0,
         ),
         'manualcrop_styles_list' => array(
-          'cart_img_circle' => 0,
-          'cart_img_square' => 'cart_img_square',
+          'cart_img_circle' => 'cart_img_circle',
+          'cart_img_coffeebook' => 0,
+          'cart_img_cover' => 0,
+          'cart_img_square' => 0,
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -446,7 +563,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -505,7 +634,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -564,7 +705,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -623,7 +776,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -682,7 +847,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -741,7 +918,19 @@ function cart_type_person_field_default_field_instances() {
     'deleted' => 0,
     'description' => '',
     'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
