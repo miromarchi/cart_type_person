@@ -123,6 +123,9 @@ function cart_type_person_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'path' => array(
+          'weight' => '8',
+        ),
       ),
       'display' => array(),
     ),
@@ -552,6 +555,20 @@ function cart_type_person_strongarm() {
     'other' => 'other',
   );
   $export['panelizer_node:cart_person_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_cart_person_pattern';
+  $strongarm->value = 'people/[node:title]';
+  $export['pathauto_node_cart_person_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'simplify_nodes_cart_person';
+  $strongarm->value = array();
+  $export['simplify_nodes_cart_person'] = $strongarm;
 
   return $export;
 }
