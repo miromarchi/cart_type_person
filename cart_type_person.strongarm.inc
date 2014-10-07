@@ -74,7 +74,6 @@ function cart_type_person_strongarm() {
     0 => 'title',
     1 => 'body',
     2 => 'field_cart_image',
-    3 => 'field_cart_based',
   );
   $export['content_complete_fields_cart_person'] = $strongarm;
 
@@ -125,6 +124,12 @@ function cart_type_person_strongarm() {
         ),
         'path' => array(
           'weight' => '8',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'locations' => array(
+          'weight' => '11',
         ),
       ),
       'display' => array(),
