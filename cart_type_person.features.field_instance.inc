@@ -74,7 +74,65 @@ function cart_type_person_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-cart_person-field_cart_based'
+  $field_instances['node-cart_person-field_cart_based'] = array(
+    'bundle' => 'cart_person',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'cart_vmode_curator' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_minimal' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'cart_vmode_sponsor' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cart_based',
+    'label' => 'Based',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 85,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
     ),
   );
 
@@ -218,7 +276,7 @@ function cart_type_person_field_default_field_instances() {
         'year_range' => '1800:+0',
       ),
       'type' => 'date_text',
-      'weight' => 3,
+      'weight' => 2,
     ),
   );
 
@@ -1180,6 +1238,7 @@ function cart_type_person_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Based');
   t('Blog link');
   t('Body');
   t('Dates');

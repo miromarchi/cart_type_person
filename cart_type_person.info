@@ -24,6 +24,7 @@ features[field_group][] = group_cart_links|node|cart_person|form
 features[field_group][] = group_cart_social|node|cart_person|form
 features[field_group][] = group_tabsgroup|node|cart_person|form
 features[field_instance][] = node-cart_person-body
+features[field_instance][] = node-cart_person-field_cart_based
 features[field_instance][] = node-cart_person-field_cart_blog_link
 features[field_instance][] = node-cart_person-field_cart_dates
 features[field_instance][] = node-cart_person-field_cart_facebook_link

@@ -23,8 +23,8 @@ function cart_type_person_field_group_info() {
     'label' => 'Web links',
     'weight' => '11',
     'children' => array(
-      0 => 'field_cart_links_web',
-      1 => 'field_cart_blog_link',
+      0 => 'field_cart_blog_link',
+      1 => 'field_cart_links_web',
       2 => 'field_cart_rss_link',
       3 => 'field_cart_wikipedia_link',
     ),
@@ -55,12 +55,12 @@ function cart_type_person_field_group_info() {
     'weight' => '12',
     'children' => array(
       0 => 'field_cart_facebook_link',
-      1 => 'field_cart_twitter_link',
+      1 => 'field_cart_flickr_link',
       2 => 'field_cart_google_link',
       3 => 'field_cart_instagram_link',
-      4 => 'field_cart_flickr_link',
-      5 => 'field_cart_youtube_link',
-      6 => 'field_cart_linkedin_link',
+      4 => 'field_cart_linkedin_link',
+      5 => 'field_cart_twitter_link',
+      6 => 'field_cart_youtube_link',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
