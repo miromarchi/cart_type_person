@@ -165,28 +165,6 @@ function cart_type_person_panelizer_defaults() {
     $display->content['new-c235dddf-320d-432a-a804-240b77be2c80'] = $pane;
     $display->panels['contentmain'][2] = 'new-c235dddf-320d-432a-a804-240b77be2c80';
     $pane = new stdClass();
-    $pane->pid = 'new-11ff5543-1db3-4e2a-b6b9-cda21c1ddc35';
-    $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'cart_view_links-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '11ff5543-1db3-4e2a-b6b9-cda21c1ddc35';
-    $display->content['new-11ff5543-1db3-4e2a-b6b9-cda21c1ddc35'] = $pane;
-    $display->panels['contentmain'][3] = 'new-11ff5543-1db3-4e2a-b6b9-cda21c1ddc35';
-    $pane = new stdClass();
     $pane->pid = 'new-bf3ba2a6-ad63-4187-8660-4e3bf1ac992f';
     $pane->panel = 'sidebar';
     $pane->type = 'views_panes';

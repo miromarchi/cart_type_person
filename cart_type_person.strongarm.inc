@@ -116,6 +116,9 @@ function cart_type_person_strongarm() {
       'cart_vmode_sponsor' => array(
         'custom_settings' => TRUE,
       ),
+      'cart_vmode_publisher' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
